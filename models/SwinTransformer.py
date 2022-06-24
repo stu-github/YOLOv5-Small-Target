@@ -6,7 +6,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from timm.models.layers import DropPath, to_2tuple, trunc_normal_
+# from timm.models.layers import DropPath, to_2tuple, trunc_normal_
+from .drop import DropPath
+from .helpers import to_2tuple
+from .weight_init import trunc_normal_
 
 class WindowAttention(nn.Module):
     r""" Window based multi-head self attention (W-MSA) module with relative position bias.
